@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="mapStyle.css" />
+    <title>Geo Aggregator</title>
+    <link rel="shortcut icon" href="images/globe.ico"> 
+  </head>
+<body>
+
+ <div id="menu">
+  	
+  	<div id="input-container">
+  		<span id="where">Where shall we go? </span> <br />
+  		<input type="text" autofocus id="input"value="london" width="70px" placeholder="Enter a location"/>
+  		<button id="input-btn">Take me there </button>
+  	</div>
+	<div id="tabs">
+		<ul>
+			<li id="wikiTab"><a href="#accordion">Wikipedia</a></li>
+			<li id="poiTab"><a href="#poiAccordion">Landmarks</a></li>
+		  	<!--<li id="hotelsTab"><a href="#eanAccordion">Hotels</a></li>	-->
+		  	<li id="flickrTab"><a href="#flickrBox">Flickr</a></li>
+		  	
+	  	</ul> 
+	  	<div id="accordion" class="accordions"> </div>
+	  	<div id="eanAccordion" class="accordions"> </div>
+	  	<div id="poiAccordion" class="accordions"> </div>
+	  	<div id="flickrBox" class="accordions"> </div>
+	</div>
+	<!--<div id="dialog-box"> 
+		<div id="places-list"></div>
+	</div>-->
+ </div>
+ <div id="flickr-hover"> </div>
+ <div id="map-canvas">  </div>
+ <div id="map-options">
+  		Currently showing markers for<br /> 
+  		<span><input type="checkbox" id="wikiCheck" name="visibleMarkers" value="Wikipedia" checked />Wikipedia Articles</span><br/>
+  		<span><input type="checkbox" id="landmarkCheck" name="visibleMarkers" value="Landmarks" checked/>Landmarks</span><br/>
+   		<span><input type="checkbox" id="hotelCheck" name="visibleMarkers" value="Hotels" checked/>Hotels</span><br/>
+  		<span><input type="checkbox" id="flickrCheck" name="visibleMarkers" value="Flickr" checked/>Flickr</span>
+
+  		
+  </div> 
+
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/vader/jquery-ui.css" />  
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script> 
+
+<script src="MapsWrapper.js"></script>
+
+<script src="AjaxLocations.js"></script>
+<script src="maps.js"> </script>
+<script src="CustomMapControls.js"></script>
+<script>
+$(document).ready(function (){
+	//$("#tabs").hide();
+	$("#accordion").accordion({collapsible: true});
+	$("#eanAccordion").accordion({collapsible: true});
+});
+	
+</script>
+
+
+ </body>
+</html>
