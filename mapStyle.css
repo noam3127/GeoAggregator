@@ -1,0 +1,131 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: #383333;
+}
+#menu {
+	color: #808080;
+	width: 33%;
+	height: 100%;
+	/*overflow: auto;*/
+	/*display: inline-block;*/
+	float: left;
+	/*resize: horizontal;*/
+	border-right: 5px solid darkgray;
+}
+#input-container {
+	margin-top:6em;
+	margin-left: 1.5em;
+	padding: 14px;
+	width: 300px;
+	font-family: futura, "Lucida-Sans", Arial;
+	font-size: 1.3em;
+}
+#input-btn {
+	background: #6F6F6F;
+	border-radius: 5px;
+	color: white;
+	line-height: 2em;
+}
+#save-btn {
+	display: none;
+	background: #6F6F6F;
+	opacity: .8;
+	border-radius: 5px;
+	color: white;
+	line-height: 2.3em;
+	cursor: pointer;
+}
+#save-btn:hover, #input-btn:hover {
+	opacity: 1;
+	background:#071477;
+}
+#flickrBox {
+	padding: 0px !important;
+}
+.choice {
+	width: 400px;
+	padding-left: 0px;
+	margin-top: -1.5em;
+}
+
+.accordions {
+	margin: .2em !important;
+	overflow: auto !important;
+	
+}
+#tabs {
+	overflow: auto !important;
+	max-height: 90%;
+	display: none;
+	
+}
+.accHead {
+	/*font-size: 12px !important;*/
+}
+.ui-widget {
+	font-size: 1em !important;
+	font-family: "Lucida-Sans", Arial, Helvetica, sans-serif !important;
+}
+.summary {
+	font-family: "Lucida-Sans", Arial, Helvetica, sans-serif !important;
+	font-size: 12px !important;
+	/*background:#BEBEC5 !important;*/
+}
+.summary img {
+	float: right;
+	height: 80px;
+}
+.wikiLink {
+	color:#006CFF !important;
+}
+#map-canvas {
+	height: 100%;
+	
+}
+#map-options {
+	display: none;
+	font-size: 1em;
+	font-family: futura, Arial;
+	background: rgba(0,0,0,.6);
+	color: lightgray;
+	padding: 1em;
+	width: 200px;
+}
+
+.streetImg {
+	font-size: 11px !important;
+}
+#poiAccordion {
+	font size: 11px !important;
+}
+#map-options {
+	z-index: 1;
+	postion: absolute;
+	right: 100px;
+}
+#flickr-hover {
+	position: absolute;
+	z-index: 99;
+	opacity: 0.9;
+}
+.ui-dialog {
+	min-height: 300px;
+}
+/*.ui-id-1{
+	color:red;
+	font-size: 14px;
+}
+/*#right-tabs {
+	float: right;
+	width: 20%;
+	height: 90%;
+}
+#ratings {
+	width: 30%;
+}*/
