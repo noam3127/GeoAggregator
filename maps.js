@@ -31,10 +31,20 @@ $(document).ready(function() {
 	});
 
 	var myControl = new CustomMapControls.controlsDiv(map);
+	CustomMapControls.addSaveButton(map);
+	$("#save-btn").on("click", function() {
+		savedMap.saveLocal(markers);
+		alert("saving" + JSON.stringify(markers));
+	});
 	currBounds = map.getBounds();
 		
     var first = true;
-	
+    
+	$("#input").keyup(function(event){
+	    if(event.keyCode == 13){
+	        $("#input-btn").click();
+	    }
+	});
 	$("#input-btn").click(function(){
 		
 		loc = $("#input").val();
@@ -116,16 +126,16 @@ $(document).ready(function() {
 		ajaxData.fetchWiki(fullURL);
 		accordions.displayFlickr(1);
 		
-		var EANpart1 = 'http://api.ean.com/ean-services/rs/hotel/v3/list?apiKey=w365b3fzkx9xd3k4qm8fuky5&destinationString=';
+		var EANpart1 = 'http://api.ean.com/ean-services/rs/hotel/v3/list?CID=55505&apiKey=d88batasn4m69t9xfmr7k7sj&destinationString=';
 		var fullEAN = EANpart1 + content + '&callback=?';
-		ajaxData.fetchEANHotels(fullEAN);
+		//ajaxData.fetchEANHotels(fullEAN);
 		
 		//var googleRests = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyAQy7fhEdJNLiPHwCPsllhSKPudRaAtyA4&"
 		 //	+"types=food&sensor=true&callback=?&query=" + loc;
 		
-		var poiUrl = "http://api.ean.com/ean-services/rs/hotel/v3/geoSearch?apiKey=w365b3fzkx9xd3k4qm8fuky5&type=2&destinationString="
+		var poiUrl = "http://api.ean.com/ean-services/rs/hotel/v3/geoSearch?CID=55505&apiKey=d88batasn4m69t9xfmr7k7sj&type=2&destinationString="
 			+ content + "&callback=?";
-		ajaxData.fetchPOI(poiUrl);
+		//ajaxData.fetchPOI(poiUrl);
 	/*	var request = {
 		    location: map.getCenter(),
 		    radius: '500',
