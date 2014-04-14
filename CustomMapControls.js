@@ -4,7 +4,6 @@ var CustomMapControls = (function () {
 		var cDiv = $("#map-options").appendTo("#map-canvas").fadeIn(1500);
 		cDiv.index = 0;
 		map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(cDiv[0]);
-		var num = 0;
 		
 		$("input[type=checkbox]").on("click", function(){
 		   
@@ -24,14 +23,17 @@ var CustomMapControls = (function () {
 	    } 
 		
 	}
-	function addControls() {
-		
+	function addSaveButton(map) {
+		var saveButton = $("#save-btn").appendTo("#map-canvas").fadeIn(1500);
+		saveButton.index = 0;
+		map.controls[google.maps.ControlPosition.TOP_RIGHT].push(saveButton[0]);
 	}
 	
 	return {
 		controlsDiv: controlsDiv,
-		addControls: addControls
+		addSaveButton: addSaveButton
 	};
 
 }());
+
 
