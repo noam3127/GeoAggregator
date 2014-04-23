@@ -122,7 +122,7 @@ $(document).ready(function() {
 	    var content = place._content;
 	    var geoURLPart1 = "http://api.geonames.org/wikipediaSearch?";
 	    var fullURL = geoURLPart1 + "&q=" +  content + "&maxRows=20&username=noam3127&type=json&callback=?";
-
+	
 		ajaxData.fetchWiki(fullURL);
 		accordions.displayFlickr(1);
 		
