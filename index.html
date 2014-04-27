@@ -35,15 +35,14 @@
  <div id="flickr-hover"> </div>
  <div id="map-canvas">  </div>
  <div id="map-options">
- 		<button id="save-btn">Save all current markers</button>
-  		Currently showing markers for<br /> 
-  		<span><input type="checkbox" id="wikiCheck" name="visibleMarkers" value="Wikipedia" checked />Wikipedia Articles</span><br/>
-  		<span><input type="checkbox" id="landmarkCheck" name="visibleMarkers" value="Landmarks" checked/>Landmarks</span><br/>
-   		<span><input type="checkbox" id="hotelCheck" name="visibleMarkers" value="Hotels" checked/>Hotels</span><br/>
-  		<span><input type="checkbox" id="flickrCheck" name="visibleMarkers" value="Flickr" checked/>Flickr</span>
-
-  		
-  </div> 
+	<button id="save-btn">Save all current markers</button>
+	Currently showing markers for<br /> 
+	<span><input type="checkbox" id="wikiCheck" name="visibleMarkers" value="Wikipedia" checked />Wikipedia Articles</span><br/>
+	<span><input type="checkbox" id="landmarkCheck" name="visibleMarkers" value="Landmarks" checked/>Landmarks</span><br/>
+	<span><input type="checkbox" id="hotelCheck" name="visibleMarkers" value="Hotels" checked/>Hotels</span><br/>
+	<span><input type="checkbox" id="flickrCheck" name="visibleMarkers" value="Flickr" checked/>Flickr</span>
+ </div> 
+ <div id="flickr-slide"> </div>
 
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/vader/jquery-ui.css" />  
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
@@ -56,6 +55,13 @@
 <script src="savedMap.js"></script>
 <script src="maps.js"> </script>
 <script src="CustomMapControls.js"></script>
+<script src="js/wikiData.js"></script>
+<script src="js/hotelsData.js"></script>
+<script src="js/landmarksData.js"></script>
+<script src="js/flickrData.js"></script>
+
+
+
 <script>
 $(document).ready(function (){
 	//$("#tabs").hide();
