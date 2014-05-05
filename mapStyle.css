@@ -32,7 +32,7 @@ body {
 	color: white;
 	line-height: 2em;
 }
-#save-btn {
+#erase-btn {
 	display: none;
 	background: #6F6F6F;
 	opacity: .8;
@@ -41,9 +41,13 @@ body {
 	line-height: 2.3em;
 	cursor: pointer;
 }
-#save-btn:hover, #input-btn:hover {
+#erase-btn:hover, #input-btn:hover {
 	opacity: 1;
 	background:#071477;
+}
+#flickr-slide {
+	display: none;
+	
 }
 #flickrBox {
 	padding: 0px !important;
